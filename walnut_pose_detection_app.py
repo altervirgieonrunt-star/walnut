@@ -94,8 +94,14 @@ class PoseDetectionThread(QThread):
             if track_line is not None:
                 track_angle = self.calculate_angle(track_line[0], track_line[1])
                 angle_diff = abs(walnut_angle - track_angle)
+                # Normalize to [0, 180]
                 if angle_diff > 180:
                     angle_diff = 360 - angle_diff
+                
+                # Check for parallelism (ignore direction), map to [0, 90] deviation
+                # If difference is close to 180, it means lines are parallel but opposite direction
+                if angle_diff > 90:
+                    angle_diff = 180 - angle_diff
             else:
                 track_angle = None
                 angle_diff = None

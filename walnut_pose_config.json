@@ -1,4 +1,4 @@
 {
-  "angle_threshold": 25,
-  "collinearity_threshold": 25
+  "angle_threshold": 5,
+  "collinearity_threshold": 5
 }
