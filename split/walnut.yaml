@@ -1,0 +1,7 @@
+path: D:\gongzuo\Walnut-main\Walnut-main\split
+train: images/train 
+val: images/val 
+test: images/test 
+kpt_shape: [3, 3] 
+nc: 1
+names: ['walnut']

@@ -1,0 +1,14 @@
+{
+  "track_line": [
+    [
+      264,
+      698
+    ],
+    [
+      1042,
+      764
+    ]
+  ],
+  "angle_threshold": 15,
+  "collinearity_threshold": 10
+}
